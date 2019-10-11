@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">New ConstraintLayout Demo</string>
+    <string name="edit_text_hint">Search</string>
+</resources>

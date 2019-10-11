@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FB4C50"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium_spacing"
+        android:background="@drawable/ic_close"
+        app:layout_constraintTop_toTopOf="@+id/edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text"/>
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium_spacing"
+        android:paddingStart="@dimen/large_spacing"
+        android:paddingEnd="@dimen/large_spacing"
+        android:paddingTop="@dimen/edit_text_padding_vertical"
+        android:paddingBottom="@dimen/edit_text_padding_vertical"
+        android:hint="@string/edit_text_hint"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="@dimen/edit_text_size"
+        android:background="@drawable/transparent_bg_bordered"
+        android:drawableLeft="@drawable/ic_search"
+        app:fontFamily="@font/lemon_sans_rounded"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Search"/>
+
+    <ImageView
+        android:id="@+id/about_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_about"/>
+
+    <ImageView
+        android:id="@+id/contact_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_contact"/>
+
+    <ImageView
+        android:id="@+id/register_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_register"/>
+
+    <ImageView
+        android:id="@+id/workshops_and_tutorials_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_workshops_and_tutorials"/>
+
+    <ImageView
+        android:id="@+id/templates_and_mockups_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_templates_and_mockups"/>
+
+    <ImageView
+        android:id="@+id/icons_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_icons"/>
+
+    <TextView
+        style="@style/IconLabel"
+        app:layout_constraintTop_toBottomOf="@+id/about_icon"
+        app:layout_constraintStart_toStartOf="@+id/about_icon"
+        app:layout_constraintEnd_toEndOf="@+id/about_icon"
+        android:text="About"/>
+
+    <TextView
+        style="@style/IconLabel"
+        app:layout_constraintTop_toBottomOf="@+id/contact_icon"
+        app:layout_constraintStart_toStartOf="@+id/contact_icon"
+        app:layout_constraintEnd_toEndOf="@+id/contact_icon"
+        android:text="Contacts"/>
+
+    <TextView
+        style="@style/IconLabel"
+        app:layout_constraintTop_toBottomOf="@+id/register_icon"
+        app:layout_constraintStart_toStartOf="@+id/register_icon"
+        app:layout_constraintEnd_toEndOf="@+id/register_icon"
+        android:text="Register"/>
+
+    <TextView
+        style="@style/IconLabel"
+        app:layout_constraintTop_toBottomOf="@+id/workshops_and_tutorials_icon"
+        app:layout_constraintStart_toStartOf="@+id/workshops_and_tutorials_icon"
+        app:layout_constraintEnd_toEndOf="@+id/workshops_and_tutorials_icon"
+        android:text="Workshops and Tutorials"/>
+
+    <TextView
+        style="@style/IconLabel"
+        app:layout_constraintTop_toBottomOf="@+id/templates_and_mockups_icon"
+        app:layout_constraintStart_toStartOf="@+id/templates_and_mockups_icon"
+        app:layout_constraintEnd_toEndOf="@+id/templates_and_mockups_icon"
+        android:text="Templates and Mockups"/>
+
+    <TextView
+        style="@style/IconLabel"
+        app:layout_constraintTop_toBottomOf="@+id/icons_icon"
+        app:layout_constraintStart_toStartOf="@+id/icons_icon"
+        app:layout_constraintEnd_toEndOf="@+id/icons_icon"
+        android:text="Icons"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_spacing"
+        app:constraint_referenced_ids="about_icon,contact_icon,register_icon,workshops_and_tutorials_icon,templates_and_mockups_icon,icons_icon"
+        app:flow_wrapMode="aligned"
+        app:flow_verticalGap="24dp"
+        app:flow_maxElementsWrap="3"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
